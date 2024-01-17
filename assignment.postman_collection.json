@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "fa07d024-240a-4cd6-9bf0-7630be20c3f9",
+		"name": "assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32334905"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "createAdmin",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "createUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTc1Y2M0NjkxMDlhMzNhMTNhNzUwZiIsImlhdCI6MTcwNTQ4NzE4MiwiZXhwIjoxNzA1NTczNTgyfQ.awy4cq8U0WqQJKmkD3WBY7h260lx-f1_q_rFd3XJ64g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Date\" : \"2024-01-16\",\n    \"Status\" : \"Absent\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/updateStatus/65a7922b642eccd4a645b6b2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"updateStatus",
+								"65a7922b642eccd4a645b6b2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adminLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"karanverma1940@gmail.com\",\n    \"password\" : \"12Aa34\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "getUserCheckout",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "setCheckoutTime",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTc5MjJiNjQyZWNjZDRhNjQ1YjZiMiIsImlhdCI6MTcwNTQ4MjYyMSwiZXhwIjoxNzA1NTY5MDIxfQ.u4ifndAtpjoobSvi3jgnk5UdVoHUEHJhLX8InKMaNMI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"setIn\" : \"8:00:00\",\n    \"setOut\" : \"5:00:00\",\n    \"Date\" : \"2024-1-17\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/CheckoutTime/65a7922b642eccd4a645b6b2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"CheckoutTime",
+								"65a7922b642eccd4a645b6b2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCheckoutTime",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
